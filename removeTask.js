@@ -23,7 +23,7 @@ const ckhArrayData = (data, title) => {
   const dataFound = data.filter((d) => d.title === title);
 
   if (dataFound.length !== 0) {
-    const findIndex = data.indexOf(title);
+    const findIndex = data.findIndex((x) => x.title === title);
     data.splice(findIndex, 1);
     return data;
   }
